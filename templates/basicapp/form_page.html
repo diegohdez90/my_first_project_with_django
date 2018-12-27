@@ -4,12 +4,20 @@
   <head>
     <meta charset="utf-8">
     <title>Forms</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha384-PmY9l28YgO4JwMKbTvgaS7XNZJ30MK9FAZjjzXtlqyZCqBY6X6bXIkM++IkyinN+"
+      crossorigin="anonymous" >
   </head>
 
   <body>
-    <h1>form</h1>
     <div class="container">
-      {{form}}
+      <div class="jumbotron">
+        <h1>form</h1> 
+        <form method="POST">
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="submit" class="btn btn-primary" value="Submit" />
+        </form>
+      </div>
     </div>
   </body>
 
