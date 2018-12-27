@@ -17,11 +17,11 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls import include
 from first_app import views
-from basicapp import views as basicviews
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^first_app/', include('first_app.urls')),
     url(r'^formpage/', include('basicapp.urls')),
+    url(r'^templates_app/', include('templates_app.urls')),
     url(r'^admin/', admin.site.urls),
 ]

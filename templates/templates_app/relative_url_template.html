@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Relative Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha384-PmY9l28YgO4JwMKbTvgaS7XNZJ30MK9FAZjjzXtlqyZCqBY6X6bXIkM++IkyinN+"
+    crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <h1>Welcome to relative url</h1>
+      <a href="{% url 'templates_app:other' %}">To the other page</a>
+      <a href="{% url 'admin:index' %}">To admin page</a>
+      <a href="{% url 'index' %}">Index</a>
+      <a href="{% url 'templates_app:index_templates' %}">To index templates</a>
+    </div>
+  </div>
+  
+</body>
+</html>
