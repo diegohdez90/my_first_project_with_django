@@ -1,14 +1,6 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Other Page</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha384-PmY9l28YgO4JwMKbTvgaS7XNZJ30MK9FAZjjzXtlqyZCqBY6X6bXIkM++IkyinN+"
-    crossorigin="anonymous">
-</head>
-<body>
-  
-</body>
-</html>
+{% extends "templates_app/base.html" %}
+  {% block body_block %}
+    <h1>Welcome to Other page</h1>
+    <p>this is an example of template inheritance</p>
+  {% endblock %}

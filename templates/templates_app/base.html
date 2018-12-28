@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Basic Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha384-PmY9l28YgO4JwMKbTvgaS7XNZJ30MK9FAZjjzXtlqyZCqBY6X6bXIkM++IkyinN+"
+    crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-defualt navbar-static-top">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li>
+          <a class="navbar-brand" href="{% url 'index' %}">Brand</a>
+        </li>
+        <li><a class="navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
+        <li><a class="navbar-link" href="{% url 'templates_app:other' %}">Other</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    {% block body_block %}
+
+    {% endblock %}
+  </div>
+</body>
+</html>
