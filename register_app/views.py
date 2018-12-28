@@ -70,4 +70,4 @@ def special(request):
 @login_required
 def user_logout(request):
   logout(request)
-  return HttpResponse(reverse('register_app:register_index'))
+  return HttpResponseRedirect(reverse('register_app:register_index'))
