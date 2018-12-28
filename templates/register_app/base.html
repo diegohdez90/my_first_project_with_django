@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha384-PmY9l28YgO4JwMKbTvgaS7XNZJ30MK9FAZjjzXtlqyZCqBY6X6bXIkM++IkyinN+"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-defualt navbar-static-top">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li>
+          <a class="navbar-brand" href="{% url 'index' %}">Django</a>
+        </li>
+        <li><a class="navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
+        <li><a class="navbar-link" href="{% url 'register_app:register' %}">Register</a></li>
+
+        {% if user.is_authenticated %}
+        <li><a class="navbar-link" href="{% url 'logout' %}">Logout</a></li>          
+        {% else %}
+        <li><a class="navbar-link" href="{% url 'register_app:user_login' %}">Login</a></li>                    
+        {% endif %}
+
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    {% block body_block %}
+
+    {% endblock %}
+  </div>
+</body>
+
+</html>

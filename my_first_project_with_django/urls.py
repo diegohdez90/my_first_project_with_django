@@ -17,11 +17,15 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls import include
 from first_app import views
+from register_app import views as register_views 
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^first_app/', include('first_app.urls')),
     url(r'^formpage/', include('basicapp.urls')),
     url(r'^templates_app/', include('templates_app.urls')),
+    url(r'^django/', include('register_app.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^logout/$', register_views.user_logout,name="logout"),
+    url(r'special', register_views.special,name="special"),
 ]
